@@ -1,6 +1,5 @@
 import React from "react";
 import Age from "./Age";
-
 class Welcome extends React.Component {
   render() {
     return (
@@ -8,7 +7,7 @@ class Welcome extends React.Component {
         <p>
           Welcome, <strong>{this.props.name}!</strong>
         </p>
-        <Age age="40" />
+        <Age age={38} />
       </div>
     );
   }
