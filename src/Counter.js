@@ -2,15 +2,15 @@ import React from "react";
 
 class Counter extends React.Component {
   state = {
-    count: 0,
+    count: this.props.initialCounter,
   };
   constructor(props) {
     super(props);
     setInterval(() => {
       this.setState({
-        count: this.state.count + 1,
+        count: this.state.count + this.props.increment,
       });
-    }, 1000);
+    }, this.props.time);
   }
 
   render() {
@@ -21,4 +21,9 @@ class Counter extends React.Component {
     );
   }
 }
+Counter.defaultProps = {
+  initialCounter: 0,
+  increment: 1,
+  time: 1000,
+};
 export default Counter;
