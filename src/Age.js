@@ -1,4 +1,5 @@
 import React from "react";
+import Counter from "./Counter";
 
 class Age extends React.Component {
   render() {
@@ -9,6 +10,7 @@ class Age extends React.Component {
         ) : (
           <p>You are very young!</p>
         )}
+        <Counter />
       </div>
     );
   }
