@@ -7,14 +7,14 @@ class Welcome extends React.Component {
         <p>
           Welcome, <strong>{this.props.name}!</strong>
         </p>
-        <Age age={this.props.age ? this.props.age : false} />
+        <Age age={45} />
       </div>
     );
   }
 }
 Welcome.defaultProps = {
   name: "Enrico",
-  age: 38,
+  age: 62,
 };
 
 export default Welcome;
