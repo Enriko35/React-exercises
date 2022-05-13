@@ -9,10 +9,8 @@ export class InteractiveWelcome extends React.Component {
   render() {
     return (
       <div>
-        <Welcome />
-        <input name="username" value={this.state.username}>
-          {this.props.name}
-        </input>
+        <Welcome name={this.props.name} />
+        <input name="username" value={this.state.username}></input>
       </div>
     );
   }
