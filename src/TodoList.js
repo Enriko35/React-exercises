@@ -2,7 +2,7 @@ import React from "react";
 
 export class TodoList extends React.Component {
   state = {
-    names: ["Beautiful", "La Casa de Papel", "Il mago di Oz", "pinocchio"],
+    names: ["Beautiful", "La Casa de Papel", "Fratelli d'Italia", "pinocchio"],
   };
 
   handleAddTodo = (event) => {
