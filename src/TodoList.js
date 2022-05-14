@@ -9,6 +9,7 @@ export class TodoList extends React.Component {
     event.preventDefault();
     const inputElement = event.target.elements.todo;
     const newEl = inputElement.value;
+    inputElement.value = "";
     this.setState((state) => {
       return {
         names: [...state.names, newEl],
