@@ -17,6 +17,15 @@ export class TodoList extends React.Component {
     });
   };
 
+  handleResetState = (event) => {
+    event.preventDefault();
+    this.setState(() => {
+      return {
+        names: [],
+      };
+    });
+  };
+
   render() {
     return (
       <div>
@@ -28,9 +37,7 @@ export class TodoList extends React.Component {
             ))}
           </ul>
           <button type="submit">Submit</button>
-          <button onClick={this.handleResetState} name="reset">
-            Reset
-          </button>
+          <button onClick={this.handleResetState}>Reset</button>
         </form>
       </div>
     );
