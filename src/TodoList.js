@@ -26,6 +26,14 @@ export class TodoList extends React.Component {
     });
   };
 
+  handleRemoveLast = () => {
+    this.setState(() => {
+      return {
+        name: [].handleRemoveLast(TodoList),
+      };
+    });
+  };
+
   render() {
     return (
       <div>
@@ -33,7 +41,12 @@ export class TodoList extends React.Component {
           <input name="todo"></input>
           <ul>
             {this.state.names.map((name) => (
-              <li>{name}</li>
+              <li>
+                {name}
+                <button type="button" onClick={this.handleRemoveLast}>
+                  X
+                </button>
+              </li>
             ))}
           </ul>
           <button type="submit">Submit</button>
