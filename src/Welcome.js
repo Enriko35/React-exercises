@@ -4,9 +4,7 @@ class Welcome extends React.Component {
   render() {
     return (
       <div>
-        <p>
-          Welcome, <strong>{this.props.name}!</strong>
-        </p>
+        <p>Welcome,{this.props.age}</p>
         <Age age={15} name="Jhonn" />
       </div>
     );

@@ -28,6 +28,9 @@ export class TodoList extends React.Component {
             ))}
           </ul>
           <button type="submit">Submit</button>
+          <button onClick={this.handleResetState} name="reset">
+            Reset
+          </button>
         </form>
       </div>
     );
