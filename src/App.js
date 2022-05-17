@@ -6,11 +6,12 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { TodoList } from "./TodoList";
 import { UncontrolledLogin } from "./UncontrolledLogin";
+import { Container } from "./Container";
 
 export class App extends React.Component {
   render() {
     return (
-      <div>
+      <Container>
         <Hello />
         <InteractiveWelcome />
         <ClickCounter />
@@ -18,7 +19,7 @@ export class App extends React.Component {
         <Login />
         <UncontrolledLogin />
         <TodoList />
-      </div>
+      </Container>
     );
   }
 }
