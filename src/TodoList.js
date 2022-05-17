@@ -38,21 +38,12 @@ export class TodoList extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleAddTodo}>
-          <input name="todo"></input>
-          <ul>
-            {this.state.names.map((name) => (
-              <li>
-                {name}
-                <button type="button" onClick={this.handleRemoveLast}>
-                  X
-                </button>
-              </li>
-            ))}
-          </ul>
-          <button type="submit">Submit</button>
-          <button onClick={this.handleResetState}>Reset</button>
-        </form>
+        {this.props.render(
+          this.state.names,
+          this.handleAddTodo,
+          this.handleResetState,
+          this.handleRemoveLast
+        )}
       </div>
     );
   }
