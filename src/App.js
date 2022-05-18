@@ -10,6 +10,7 @@ import { Container } from "./Container";
 import { DisplayLenguage } from "./DisplayLenguage";
 import { Language } from "./Language";
 import Welcome from "./Welcome";
+import Sum from "./Sum"
 
 export class App extends React.Component {
   state = {
@@ -39,6 +40,7 @@ export class App extends React.Component {
               <Welcome name= "eric"/>
               <Language />
               <Hello />
+              <Sum numbers={[5, 36, 78]}/>
               <InteractiveWelcome />
               <ClickCounter />
               <ClickTracker />
