@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import ClickCounter from "./ClickCounter";
 import { ClickTracker } from "./ClickTracker";
 import Hello from "./Hello";
@@ -7,39 +7,44 @@ import  Login  from "./Login";
 import { TodoList } from "./TodoList";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Container } from "./Container";
-import { DisplayLenguage } from "./DisplayLenguage";
+// import { DisplayLenguage } from "./DisplayLenguage";
 import { Language } from "./Language";
 import Welcome from "./Welcome";
 import Sum from "./Sum"
 import Counter from "./Counter";
 
-export class App extends React.Component {
-  state = {
-    language: "it",
-  };
 
-  handleLenguageChange = (event) => {
-    this.setState({
-      language: event.target.value,
-    });
-  };
+export function App(){
+  // state = {
+  //   language: "it",
+  // };
 
-  render() {
+  // handleLenguageChange = (event) => {
+  //   this.setState({
+  //     language: event.target.value,
+  //   });
+  // };
+
+
+  const [showCounter, setShowCounter] = useState(true)
+  function handleToggleCounter(){
+    setShowCounter((s)=> !s)
+  }
+ 
     return (
       <div>
         <Container title={"React-lesson"}>
           <div>
-            <select
+            {/* <select
               value={this.state.language}
               onChange={this.handleLenguageChange}
             >
               <option value="en">English</option>
               <option value="it">Italiano</option>
-            </select>
+            </select> */}
 
-            <DisplayLenguage.Provider value={this.state.language}>
+            {/* <DisplayLenguage.Provider value={this.state.language}> */}
               <Welcome name= "eric"/>
-              <Counter/>
               <Language />
               <Hello />
               <Sum />
@@ -75,10 +80,12 @@ export class App extends React.Component {
                   );
                 }}
               />
-            </DisplayLenguage.Provider>
+            {/* </DisplayLenguage.Provider> */}
           </div>
+        {showCounter && <Counter/> } 
+        <button onClick={handleToggleCounter}>Toggle counter</button>
         </Container>
       </div>
     );
   }
-}
+

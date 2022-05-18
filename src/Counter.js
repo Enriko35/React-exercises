@@ -1,26 +1,22 @@
-import React, {useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 
-const Counter = ({initialValue = 0}) => {
-const [counter, setCounter] = useState(initialValue)
+const Counter = ({ initialValue = 0 }) => {
+  const [counter, setCounter] = useState(initialValue);
 
-useEffect(() => {
-console.log(`Counter start in: ${counter}`)
-}, [counter])
+  useEffect(() => {
+    console.log(`Counter start in: ${counter}`);
+  }, [counter]);
 
-
-
-function onCounterChange() {
-  setCounter(counter + 1)
-
-}
+  function onCounterChange() {
+    setCounter(counter + 1);
+  }
 
   return (
     <div>
       <h2>Counter: {counter}</h2>
       <button onClick={onCounterChange}>Increment</button>
     </div>
-  )
-}
+  );
+};
 
-export default Counter
-
+export default Counter;
