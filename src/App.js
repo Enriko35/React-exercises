@@ -40,7 +40,7 @@ export class App extends React.Component {
               <Welcome name= "eric"/>
               <Language />
               <Hello />
-              <Sum numbers={[5, 36, 78]}/>
+              <Sum />
               <InteractiveWelcome />
               <ClickCounter />
               <ClickTracker />

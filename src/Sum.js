@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Sum = (props) => {
-    const sum = props.numbers.reduce((a, b)=> a + b,0)
+const Sum = ({numbers = [45 + 67]}) => {
+    const sum = numbers.reduce((a, b)=> a + b,0)
 
 return (
     <div>
@@ -9,5 +9,6 @@ return (
     </div>
   )
 }
+
 
 export default Sum
