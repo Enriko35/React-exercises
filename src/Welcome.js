@@ -1,16 +1,12 @@
-import React from "react";
-import Age from "./Age";
-class Welcome extends React.Component {
-  render() {
-    return (
-      <div className="welcome">
-        <p>Welcome,{this.props.age}</p>
-        <Age age={15} name="Jhonn" />
-      </div>
-    );
-  }
+import React from 'react'
+
+const Welcome = ({name}) => {
+  return (
+    <div className='welcome'>
+      <h1>Hello, {name}!</h1>
+    </div>
+  )
 }
-Welcome.defaultProps = {
-  name: "Jhonny",
-};
-export default Welcome;
+
+export default Welcome
+

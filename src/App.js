@@ -9,6 +9,7 @@ import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Container } from "./Container";
 import { DisplayLenguage } from "./DisplayLenguage";
 import { Language } from "./Language";
+import Welcome from "./Welcome";
 
 export class App extends React.Component {
   state = {
@@ -35,6 +36,7 @@ export class App extends React.Component {
             </select>
 
             <DisplayLenguage.Provider value={this.state.language}>
+              <Welcome name= "eric"/>
               <Language />
               <Hello />
               <InteractiveWelcome />
