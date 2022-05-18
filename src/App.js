@@ -11,6 +11,7 @@ import { DisplayLenguage } from "./DisplayLenguage";
 import { Language } from "./Language";
 import Welcome from "./Welcome";
 import Sum from "./Sum"
+import Counter from "./Counter";
 
 export class App extends React.Component {
   state = {
@@ -38,6 +39,7 @@ export class App extends React.Component {
 
             <DisplayLenguage.Provider value={this.state.language}>
               <Welcome name= "eric"/>
+              <Counter/>
               <Language />
               <Hello />
               <Sum />
