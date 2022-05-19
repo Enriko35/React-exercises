@@ -12,6 +12,7 @@ import { Language } from "./Language";
 import Welcome from "./Welcome";
 import Sum from "./Sum"
 import Counter from "./Counter";
+import GithubUser from "./GithubUser";
 
 
 export function App(){
@@ -45,6 +46,7 @@ export function App(){
 
             {/* <DisplayLenguage.Provider value={this.state.language}> */}
               <Welcome name= "eric"/>
+              <GithubUser username="Enriko35"/>
               <Language />
               <Hello />
               <Sum />
