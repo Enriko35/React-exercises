@@ -7,8 +7,10 @@ class Welcome extends React.Component {
         <p>
           Welcome, <strong>{this.props.name}!</strong>
         </p>
-        <Age age={30} name="Jhonn" />
-      </div>
+            {this.props.age > 18 &&
+        this.props.age < 65 &&
+        this.props.name === "Jhonn" ? ( <Age age={this.props.age} name= {this.props.name}/>) : (null)}
+        </div>
     );
   }
 }
