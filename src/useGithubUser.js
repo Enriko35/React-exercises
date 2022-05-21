@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState } from "react";
 
 export function useGithubUser() {
   const [data, setData] = useState([]);
