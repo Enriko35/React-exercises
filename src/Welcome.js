@@ -7,7 +7,7 @@ class Welcome extends React.Component {
         <p>
           Welcome, <strong>{this.props.name}!</strong>
         </p>
-        <Age age={this.props.age ? this.props.age : false} />
+       {this.props.age && <Age age={this.props.age} />}
       </div>
     );
   }
