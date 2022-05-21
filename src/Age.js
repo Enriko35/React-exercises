@@ -5,9 +5,7 @@ class Age extends React.Component {
     return (
       <div>
         <p>
-          {this.props.age > 18 && this.props.age < 65 ? (
-            <p>your age is: {this.props.age}</p>
-          ) : null}
+          <p>your age is: {this.props.age}</p>
         </p>
       </div>
     );
