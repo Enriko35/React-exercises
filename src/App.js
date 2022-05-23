@@ -13,7 +13,7 @@ import Welcome from "./Welcome";
 import Sum from "./Sum";
 import Counter from "./Counter";
 import GithubUserList from "./GithubUserList";
-import CarDetails from "./CarDetails";
+import FilteredList from "./FilteredList";
 
 export function App() {
   // state = {
@@ -47,13 +47,7 @@ export function App() {
           <Welcome name="eric" />
           <Language />
           <GithubUserList />
-          <CarDetails
-            initialData={{
-              model: "",
-              year: "",
-              color: "",
-            }}
-          />
+          <FilteredList />
           <Hello />
           <Sum />
           <InteractiveWelcome />
