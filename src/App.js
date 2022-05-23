@@ -14,6 +14,7 @@ import Sum from "./Sum";
 import Counter from "./Counter";
 import GithubUserList from "./GithubUserList";
 import FilteredList from "./FilteredList";
+import CarDetails from "./CarDetails";
 
 export function App() {
   // state = {
@@ -47,6 +48,13 @@ export function App() {
           <Welcome name="eric" />
           <Language />
           <GithubUserList />
+          <CarDetails
+            initialData={{
+              model: "",
+              year: "",
+              color: "",
+            }}
+          />
           <FilteredList />
           <Hello />
           <Sum />
