@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
 import ClickCounter from "./ClickCounter";
 import { ClickTracker } from "./ClickTracker";
 import Hello from "./Hello";
@@ -15,35 +16,25 @@ import Counter from "./Counter";
 import GithubUserList from "./GithubUserList";
 import FilteredList from "./FilteredList";
 import CarDetails from "./CarDetails";
+=======
+import { DisplayLanguage } from "./DisplayLanguage";
+import { LanguageContext } from "./LanguageContext";
+>>>>>>> useContext
 
 export function App() {
-  // state = {
-  //   language: "it",
-  // };
-
-  // handleLenguageChange = (event) => {
-  //   this.setState({
-  //     language: event.target.value,
-  //   });
-  // };
-
-  const [showCounter, setShowCounter] = useState(true);
-  function handleToggleCounter() {
-    setShowCounter((s) => !s);
-  }
-
+  const [language, setLanguage] = useState("it");
+  const handleLanguage = (event) => {
+    setLanguage(event.target.value);
+  };
   return (
     <div>
-      <Container title={"React-lesson"}>
-        <div>
-          {/* <select
-              value={this.state.language}
-              onChange={this.handleLenguageChange}
-            >
-              <option value="en">English</option>
-              <option value="it">Italiano</option>
-            </select> */}
+      <div>
+        <select value={language} onChange={handleLanguage}>
+          <option value="en">English</option>
+          <option value="it">Italiano</option>
+        </select>
 
+<<<<<<< HEAD
           {/* <DisplayLenguage.Provider value={this.state.language}> */}
           <Welcome name="eric" />
           <Language />
@@ -93,6 +84,12 @@ export function App() {
         {showCounter && <Counter />}
         <button onClick={handleToggleCounter}>Toggle counter</button>
       </Container>
+=======
+        <LanguageContext.Provider value={language}>
+          <DisplayLanguage />
+        </LanguageContext.Provider>
+      </div>
+>>>>>>> useContext
     </div>
   );
 }

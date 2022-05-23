@@ -1,5 +1,5 @@
 import React from "react";
-import { DisplayLenguage } from "./DisplayLenguage";
+import { DisplayLanguage } from "./DisplayLanguage";
 
 const Strings = {
   en: { CURRENT_LANGUAGE: "Language is:" },
@@ -11,11 +11,11 @@ export class Language extends React.Component {
     return (
       <div>
         <p>Ciao Mondo</p>
-        <DisplayLenguage.Consumer>
+        <DisplayLanguage.Consumer>
           {(language) => {
             return <h1>{Strings[language].CURRENT_LANGUAGE}</h1>;
           }}
-        </DisplayLenguage.Consumer>
+        </DisplayLanguage.Consumer>
       </div>
     );
   }
