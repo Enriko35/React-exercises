@@ -1,19 +1,19 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Counter from "./Counter";
+import ShowGithubUser from "./ShowGithubUser";
+import { Welcome } from "./Welcome";
 
-export const Welcome = ({ name }) => {
-  return (
-    <div className="welcome">
-      <h1>Hello, {name}!</h1>
-    </div>
-  );
-};
 export function App() {
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Welcome name="Erik" />} />
-      </Routes>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/Welcome" element={<Welcome name="Erik" />} />
+          <Route path="/Counter" element={<Counter />} />
+          <Route path="/username" element={<ShowGithubUser />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
