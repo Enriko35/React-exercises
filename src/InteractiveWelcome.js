@@ -1,7 +1,7 @@
 import React from "react";
 import Welcome from "./Welcome";
 
-export class InteractiveWelcome extends React.Component {
+class InteractiveWelcome extends React.Component {
   state = {
     username: "Jhonny",
   };
@@ -15,3 +15,4 @@ export class InteractiveWelcome extends React.Component {
     );
   }
 }
+export default InteractiveWelcome;
