@@ -20,12 +20,14 @@ const GithubUserList = () => {
         {user.map((item) => (
           <li>
             <ShowGithubUser />
+
             <li>
               <Link to="/item">{item}</Link>
             </li>
           </li>
         ))}
       </ul>
+
       <Outlet />
     </div>
   );
