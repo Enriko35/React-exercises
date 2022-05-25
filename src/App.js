@@ -4,7 +4,7 @@ import Counter from "./Counter";
 import { Welcome } from "./Welcome";
 import { Container } from "./Container";
 import GithubUserList from "./GithubUserList";
-
+import UseGithubUser from "./UseGithubUser";
 export function App() {
   return (
     <>
@@ -13,16 +13,16 @@ export function App() {
           <div>
             <Link to="/Welcome">Welcome</Link> |
             <Link to="/Counter">Counter</Link> |
-            <Link to="/GithubUserList">My NickName</Link>
+            <Link to="/GithubUserList">My NickName</Link> |
+            <Link to="users">Users</Link>
           </div>
           <Routes>
             <Route path="/Welcome" element={<Welcome name="Erik" />} />
             <Route path="/Counter" element={<Counter />} />
-
             <Route path="/users:/item" element={<GithubUserList />}>
               <Route index element={<p>Aggiungi un utente e selezionalo</p>} />
             </Route>
-
+            <Route path="users" element={<UseGithubUser />} />
             <Route
               path="*"
               element={
