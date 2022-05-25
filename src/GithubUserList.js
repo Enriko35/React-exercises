@@ -1,5 +1,6 @@
 import { useState } from "react";
-import GithubUser from "./GithubUser";
+import { Link, Outlet } from "react-router-dom";
+import ShowGithubUser from "./ShowGithubUser";
 
 const GithubUserList = () => {
   const [user, setUser] = useState(["Enriko35"]);
@@ -12,18 +13,20 @@ const GithubUserList = () => {
   return (
     <div>
       <form onSubmit={handlerAddUsers}>
-        <input  name="input" />
-        <button type="submit">
-          Add
-        </button>
+        <input name="input" />
+        <button type="submit">Add</button>
       </form>
       <ul>
         {user.map((item) => (
           <li>
-            <GithubUser username={item} />
+            <ShowGithubUser />
+            <li>
+              <Link to="/item">{item}</Link>
+            </li>
           </li>
         ))}
       </ul>
+      <Outlet />
     </div>
   );
 };
