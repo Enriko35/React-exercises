@@ -5,6 +5,7 @@ import { Welcome } from "./Welcome";
 import { Container } from "./Container";
 import GithubUserList from "./GithubUserList";
 import UseGithubUser from "./UseGithubUser";
+import GithubUser from "./GithubUser";
 export function App() {
   return (
     <>
@@ -23,6 +24,9 @@ export function App() {
               <Route index element={<p>Aggiungi un utente e selezionalo</p>} />
             </Route>
             <Route path="users" element={<UseGithubUser />} />
+            <Route>
+              <Route path="username" element={<GithubUser />} />
+            </Route>
             <Route
               path="*"
               element={

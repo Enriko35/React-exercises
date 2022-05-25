@@ -1,19 +1,21 @@
-import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import UsegithubUser from "./UseGithubUser";
 
-const GithubUser = ({ username }) => {
-  const [data, setData] = useState(null);
-  useEffect(() => {
-    fetch(`https://api.github.com/users/${username}`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((json) => {
-        console.log(json);
-        setData(json);
-      });
-  }, [username]);
+const GithubUser = () => {
+  const { username } = useParams();
+  const { data, load, err, onFetchUser } = UsegithubUser(username);
 
-  return <div>{data && <h1>{data.login}</h1>}</div>;
+  function handleGetUserData() {
+    onFetchUser(username);
+  }
+  return (
+    <div>
+      <button onClick={handleGetUserData}>Load...</button>
+      {load && <h2>Load...</h2>}
+      {err && <h2>There is an error</h2>}
+      {data && <h1>{data.name}</h1>}
+    </div>
+  );
 };
 
 export default GithubUser;

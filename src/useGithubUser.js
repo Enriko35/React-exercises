@@ -1,3 +1,4 @@
+import { Outlet, Link } from "react-router-dom";
 import useSWR from "swr";
 
 const fetcher = (url) => fetch(url).then((response) => response.json());
@@ -12,10 +13,13 @@ function UseGithubUser() {
       {data && !error && (
         <ul>
           {data.map((user) => (
-            <li key={user.login}>{user.login}</li>
+            <li key={user.login}>
+              <Link to={`/users/${user.login}`}>{user.login}</Link>
+            </li>
           ))}
         </ul>
       )}
+      <Outlet />
     </div>
   );
 }
