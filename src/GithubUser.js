@@ -8,6 +8,8 @@ const GithubUser = () => {
   function handleGetUserData() {
     onFetchUser(username);
   }
+
+  
   return (
     <div>
       <button onClick={handleGetUserData}>Load...</button>
