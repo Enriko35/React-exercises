@@ -4,7 +4,7 @@ import Counter from "./Counter";
 import { Welcome } from "./Welcome";
 import { Container } from "./Container";
 import GithubUserList from "./GithubUserList";
-import UseGithubUser from "./UseGithubUser";
+import UseGithubUser from "./useGithubUser";
 import GithubUser from "./GithubUser";
 export function App() {
   return (

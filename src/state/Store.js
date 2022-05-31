@@ -1,17 +1,11 @@
-import { createStore } from "redux";
-import {
-  counterReducer,
-  incrementCounter,
-  decrementCounter,
-  resetCounter,
-} from "./CounterReducer";
+import { combineReducers, createStore } from "redux";
 
-export const store = createStore(counterReducer);
+import { counterState } from "./CounterState";
+import { todoReducer } from "./TodosReducers";
 
-store.dispatch(incrementCounter(5));
-store.dispatch(decrementCounter(3));
-store.dispatch(decrementCounter(6));
-store.dispatch(resetCounter());
-store.subscribe(() => {
-  console.log(store.getState());
+const rootReducer = combineReducers({
+  counter: counterState.reducer,
+  todos: todoReducer.reducer,
 });
+
+export const store = createStore(rootReducer);
