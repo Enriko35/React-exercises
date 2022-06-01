@@ -3,7 +3,7 @@ import { counterState } from "./state/CounterState";
 
 export function ReduxCounter() {
   const counter = useSelector((state) => state.counter);
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
 
   function handleCounterIncrement() {
     dispatch(counterState.actions.increment(1));
